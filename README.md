@@ -45,30 +45,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/array-base-at4d
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var at4d = require( '@stdlib/array-base-at4d' );
+import at4d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at4d@esm/index.mjs';
 ```
 
 #### at4d( x, i0, i1, i2, i3 )
@@ -118,13 +102,18 @@ The function accepts the following arguments:
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var papply = require( '@stdlib/utils-papply' );
-var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
-var filled4dBy = require( '@stdlib/array-base-filled4d-by' );
-var quaternary4d = require( '@stdlib/array-base-quaternary4d' );
-var zeros4d = require( '@stdlib/array-base-zeros4d' );
-var at4d = require( '@stdlib/array-base-at4d' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import papply from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-papply@esm/index.mjs';
+var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
+import filled4dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled4d-by@esm/index.mjs';
+import quaternary4d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-quaternary4d@esm/index.mjs';
+import zeros4d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zeros4d@esm/index.mjs';
+import at4d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-at4d@esm/index.mjs';
 
 var shape = [ 2, 2, 4, 4 ];
 
@@ -152,6 +141,10 @@ console.log( out );
 // Fill the output array with randomly selected values from the input array:
 quaternary4d( [ i0, i1, i2, i3, out ], shape, papply( at4d, x ) );
 console.log( out );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -183,7 +176,7 @@ console.log( out );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
