@@ -40,7 +40,7 @@
     "@stdlib/types": "^0.4.3"
   },
   "devDependencies": {
-    "@stdlib/array-base-filled4d-by": "^0.2.2",
+    "@stdlib/array-base-filled4d-by": "^0.2.3",
     "@stdlib/array-base-flatten4d": "^0.2.2",
     "@stdlib/array-base-incrspace": "^0.2.2",
     "@stdlib/array-base-n-cartesian-product": "^0.2.2",
@@ -85,7 +85,6 @@
     "access",
     "retrieve"
   ],
-  "__stdlib__": {},
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stdlib"
