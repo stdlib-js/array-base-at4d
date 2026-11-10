@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2024 The Stdlib Authors.
@@ -16,16 +16,23 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { Array4D } from '@stdlib/types/array';
 
 /**
-* Return an element from a four-dimensional nested array.
+* Returns an element from a four-dimensional nested array.
 *
-* @module @stdlib/array-base-at4d
+* @param x - input array
+* @param i0 - first dimension index
+* @param i1 - second dimension index
+* @param i2 - third dimension index
+* @param i3 - fourth dimension index
+* @returns nested array element
 *
 * @example
-* var at4d = require( '@stdlib/array-base-at4d' );
-*
 * var x = [ [ [ [ 1, 2 ], [ 3, 4 ] ] ] ];
 *
 * var v = at4d( x, 0, 0, 0, 1 );
@@ -34,15 +41,12 @@
 * v = at4d( x, 0, 0, 1, 0 );
 * // returns 3
 *
-* v = at4d( x, 0, 0, -2, -2 );
+* v = at4d( x, -1, -1, -2, -2 );
 * // returns 1
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function at4d<T = unknown>( x: Array4D<T>, i0: number, i1: number, i2: number, i3: number ): T | void;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = at4d;
